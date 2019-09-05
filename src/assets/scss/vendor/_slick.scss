@@ -1,0 +1,43 @@
+.slick-arrow {
+    background: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.175);
+    z-index: 1;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+
+        &.icon-arrow-right {
+            background: svg-load('../img/icon-arrow.svg') no-repeat;
+            filter: invert(89%) sepia(0%) saturate(3311%) hue-rotate(58deg) brightness(91%) contrast(106%);
+        }
+
+        &.icon-arrow-left {
+            background: svg-load('../img/icon-arrow.svg') no-repeat;
+            transform: rotate(180deg);
+            filter: invert(89%) sepia(0%) saturate(3311%) hue-rotate(58deg) brightness(91%) contrast(106%);
+        }
+    }
+
+    &::before {
+        content: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: #ffffff;
+    }
+}
+
+.slick-next {
+    right: -5px;
+}
+
+.slick-prev {
+    left: -5px;
+}
+

@@ -1,0 +1,15 @@
+.text-blue {
+    color: $color-blue-800;
+}
+
+.bg-blue-light {
+    background-color: $color-blue-50;
+}
+
+.col-spacing {
+    margin: -10px;
+
+    @include e('item'){
+        padding: 10px;
+    }
+}

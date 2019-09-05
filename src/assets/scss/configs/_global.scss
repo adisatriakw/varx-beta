@@ -1,0 +1,25 @@
+@include fontFace('CircularStd-Book','../fonts/CircularStd-Book');
+
+body {
+    @include font-smoothing('antialiased');
+    color: $color-grey-800;
+    font-size: 14px;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none; 
+}
+
+::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent; 
+}
+
+.slick-slide {
+    outline: none
+}

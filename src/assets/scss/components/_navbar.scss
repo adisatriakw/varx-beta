@@ -1,0 +1,26 @@
+.navbar-expand-lg {
+     .navbar-nav {
+         .nav-link {      
+            padding-right: 2rem;
+            padding-left: 2rem;
+         }
+     }
+}
+
+.navbar-homepage {
+    background: transparent;
+    .navbar-brand {
+        @include e('img') {
+            width: 110px;
+            max-width: 100%;
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+.navbar-brand {
+    @include e('img') {
+        width: 110px;
+        max-width: 100%;
+    }
+}

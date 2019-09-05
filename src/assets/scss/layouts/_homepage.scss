@@ -1,0 +1,171 @@
+.section-masthead {
+  background-color: #ffffff;
+  background-image: url('../img/cover-masthead.png');
+  background-size: cover;
+  background-position: right;
+
+  @include e('text') {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+}
+
+.section {
+  min-height: 100vh;
+
+  @include e('title') {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @include e('btn') {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.section-services {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #ffffff;
+
+  @include e('background') {
+    background: url('../img/cover-services-left.png') bottom left no-repeat,
+      url('../img/cover-services-right.png') center right no-repeat,
+      linear-gradient(244deg, #3a7bd5 0%, #00d2ff 100%);
+
+    border-radius: 1rem;
+    padding: 1rem 1rem 2rem;
+
+    .row:nth-child(odd) {
+      .section-services__wrapper {
+        margin-right: -50px;
+      }
+
+      .section-services__card {
+        padding-left: 3.5rem;
+        text-align: left;
+      }
+    }
+
+    .row:nth-child(even) {
+      .section-services__wrapper {
+        margin-left: -50px;
+      }
+
+      .section-services__card {
+        padding-right: 3.5rem;
+        text-align: right;
+      }
+    }
+  }
+
+  @include e('wrapper') {
+    display: inline-block;
+    z-index: 1;
+  }
+
+  @include e('thumbnail') {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 1rem;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.175);
+
+    display: flex;
+    justify-content: center;
+
+    @include m('big') {
+      width: 180px;
+      height: 180px;
+      border-radius: 90px;
+    }
+  }
+
+  .col-spacing {
+    margin: -10px;
+
+    @include e('item') {
+      padding: 30px 10px;
+    }
+  }
+}
+
+.section-product {
+  background-color: $color-blue-50;
+}
+
+.section-about {
+  background-color: #ffffff;
+
+  @include e('wrapper') {
+    z-index: 2;
+    margin-top: -50px;
+  }
+
+  @include e('thumbnail') {
+    text-align: center;
+  }
+
+  @include e('img') {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 5px solid #ffffff;
+  }
+
+  .section-client {
+    background-color: $color-blue-50;
+    padding: 2.5rem 0;
+    margin-top: 5.5rem;
+  }
+}
+
+.section-location {
+  background: url('../img/cover-loc-left.png') 260% 200% no-repeat,
+    url('../img/cover-loc-right.png') 380% 5% no-repeat,
+    linear-gradient(244deg, #3a7bd5 0%, #00d2ff 100%);
+
+  @include e('text') {
+    padding-top: 2rem;
+  }
+
+  @include e('col') {
+    text-align: center;
+    color: #ffffff;
+    padding: 6rem 0;
+  }
+}
+
+.section-featured {
+    background: url('../img/cover-pages.png') center center no-repeat,
+    #ffffff;
+}
+
+.section-team {
+    background-color: $color-blue-50;
+
+    &__wrapper {
+        text-align: center;
+        margin-bottom: -60px;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    &__thumbnail {
+        width: 120px;
+        height: 120px;
+        z-index: 1;
+    }
+
+    &__img {
+        border-radius: 60px;
+    }
+}

@@ -1,0 +1,70 @@
+.card {
+    border-radius: 1rem;
+}
+
+.card-product {
+  border: 0;
+
+  @include e('inner') {
+    padding: 3rem 2rem;
+  }
+
+  @include e('text') {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+.card-team {
+  border: 0;
+
+  @include e('inner') {
+    padding: 5.5rem 2rem 2rem;
+  }
+
+  @include e('text') {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+.section-services {
+  @include e('card') {
+    border: 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.175);
+  }
+}
+
+.section-about {
+  @include e('card') {
+    border: 0;
+    padding: 5rem 1rem;
+    box-shadow: 1rem 1rem 5rem 1rem #f3f3f3;
+
+    background: url('../img/cover-about-corner-left.png') left top no-repeat,
+      url('../img/cover-about-corner-right.png') right bottom no-repeat;
+    background-color: #ffffff;
+    background-size: auto;
+  }
+}
+
+.card-scroll {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  @include e('item') {
+    padding: 10px;
+  }
+}
+
+.section-featured {
+  @include e('card') {
+    border: 0;
+    padding: 1.5rem 1.5rem 1rem 4rem;
+    box-shadow: 1rem 1rem 5rem 1rem #f3f3f3;
+
+    .card-body {
+      padding: 0;
+    }
+  }
+}

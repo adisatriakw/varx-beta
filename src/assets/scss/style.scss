@@ -1,0 +1,27 @@
+@import './themes/variables';
+@import './themes/theme';
+
+
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+@import './configs/mixins';
+@import './configs/global';
+@import './configs/utilities';
+
+@import './components/navbar';
+@import './components/footer';
+@import './components/button';
+@import './components/card';
+@import './components/icon';
+
+@import './vendor/slick';
+
+@import './layouts/homepage';
+@import './layouts/pages';
+
+@import './configs/media';

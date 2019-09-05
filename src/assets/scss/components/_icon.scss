@@ -1,0 +1,46 @@
+.icon {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    &.icon-quote {
+        width: 30px;
+        height: 30px;
+        background: svg-load('../img/icon-7.svg', fill=#e5e5e5) no-repeat;
+    }
+
+    &.icon-ai {
+        width: 170px;
+        height: 170px;
+        background: svg-load('../img/icon-ai.svg') no-repeat;
+    }
+
+    &.icon-erp {
+        width: 170px;
+        height: 170px;
+        background: svg-load('../img/icon-erp.svg') no-repeat;
+    }
+
+    &.icon-iot {
+        width: 170px;
+        height: 170px;
+        background: svg-load('../img/icon-iot.svg') no-repeat;
+    }
+
+    &.icon-common {
+        width: 170px;
+        height: 170px;
+        background: svg-load('../img/icon-common.svg') no-repeat;
+    }
+
+    &.icon-robots {
+        width: 170px;
+        height: 170px;
+        background: svg-load('../img/icon-robots.svg') no-repeat;
+    }
+
+    &.icon-checklist {
+        width: 54px;
+        height: 54px;
+        background: svg-load('../img/icon-checklist.svg') no-repeat;
+    }
+}
