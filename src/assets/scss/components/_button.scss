@@ -12,3 +12,36 @@
     padding-left: 3.5rem;
     padding-right: 3.5rem; 
 }
+
+.cd-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    background: url(../img/icon-up-arrow.svg) no-repeat center 50%;
+    background-size: 30px 30px;
+    background-color: $color-blue-600;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s,visibility .3s,background-color .3s;
+
+    @include m('is-visible') {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @include m('fade-out') {
+        opacity: .5;  
+    }
+}
+
+.text-replace {
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}

@@ -58,7 +58,7 @@ function scssTask() {
 
 function jsTask() {
   return gulp
-    .src(['src/assets/js/jquery.min.js', 'src/assets/js/bootstrap.min.js', 'src/assets/js/slick.min.js', 'src/assets/js/carousel.js', 'src/assets/js/toggler.js'])
+    .src(['src/assets/js/jquery.min.js', 'src/assets/js/bootstrap.min.js', 'src/assets/js/slick.min.js', 'src/assets/js/carousel.js', 'src/assets/js/toggler.js', 'src/assets/js/scrollTop.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('script.js'))
     .pipe(sourcemaps.write())
@@ -101,15 +101,17 @@ function userefTask() {
 }
 
 function watchTask() {
-  gulp.watch([files.scssPath, files.jsPath], gulp.parallel(scssTask, jsTask));
+  gulp.watch(files.scssPath, scssTask);
   gulp.watch('src/*.html', browserSyncReload);
 }
 
+// Default
+exports.default = gulp.series(
+  gulp.parallel(scssTask, jsTask)
+);
+
 // Production
 gulp.task('build:prod',gulp.parallel([css, js, imageTask, fontTask, userefTask]));
+
 // Development
 gulp.task('build:dev', gulp.parallel(watchTask, browserSync));
-
-// exports.default = gulp.series(
-//   gulp.parallel(scssTask, jsTask)
-// );
